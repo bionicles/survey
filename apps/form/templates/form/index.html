@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+  </head>
+  <style>
+    *{text-align: center;}
+  </style>
+  <body>
+    <h1>THE BIONIC SURVEY OF DOOM</h1>
+
+    <form action='result' method='post'>
+      {% csrf_token %}
+      <span>Your Name: </span> <input type="text" name="name">
+      <br>
+      <br>
+      <span>Dojo Location: </span> <select name='city'>
+        <option value="Mount Doom">Mount Doom</option>
+        <option value="Rivendell">Rivendell</option>
+        <option value="Gondor">Gondor</option>
+      </select>
+      <br>
+      <br>
+      <span>Favorite Language: </span><select name='language'>
+        <option value="Swahili">Swahili</option>
+        <option value="Klingon">Klingon</option>
+        <option value="Greek">Greek</option>
+      </select>
+      <br>
+      <br>
+      <span>Comment (optional):</span>
+      <input type="text" name="comment">
+      <br>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+
+  </body>
+</html>
